@@ -5,7 +5,7 @@ import math
 st.title ('aplikasi perhitungan luas bangun datar')
 st.header ('ini buatan anak si')
 
-menu = st.sidebar.selectbox ('Menu', ['Luas Persegi', 'Luas Segitiga', 'Luas Lingkaran'])
+menu = st.sidebar.selectbox ('Menu', ['Luas Persegi', 'Luas Segitiga', 'Luas Lingkaran', 'Luas Persegi Panjang'])
 
 if menu == 'Luas Persegi' :
     st.write (':blue[ini halaman untuk menghitung luas persegi]🔥')
@@ -34,3 +34,13 @@ elif menu == 'Luas Lingkaran':
     if st.button ('hitung'):
         Luas = math.pi * (r**2)
         st.success (f'Luas Lingkaran adalah {Luas}')
+
+elif menu == 'Luas Persegi Panjang' :
+    st.write ('Ini Halaman Untuk Menghitung Luas Persegi Panjang')
+    st.image ('https://cnc-magazine.oramiland.com/parenting/images/rumus_keliling_persegi_panjang.width-800.format-webp.webp', caption= 'gambar dan rumus luas persegi panjang')
+    panjang = st.number_input ('masukan panjang persegi panjang', min_value=0)
+    lebar = st.number_input ('masukan lebar persei panjang', min_value=0)
+
+    if st.button ('hitung'):
+        Luas = panjang * lebar
+        st.success (f'Luas Persegi Panjang Adalah {Luas}')
